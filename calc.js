@@ -8,6 +8,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
   amountE.focus();
 
+  // "calculate"
   calc.addEventListener('click', function() {
     let amount = amountE.value;
     let price = priceE.value;
@@ -18,6 +19,7 @@ document.addEventListener('DOMContentLoaded', function() {
     resultE.innerHTML = quantity;
   }, false);
 
+  // copy to clipboard
   copyE.addEventListener('click', function() {
     var text = resultE.innerText;
     var elem = document.createElement("textarea");
