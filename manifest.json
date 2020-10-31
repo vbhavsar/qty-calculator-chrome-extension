@@ -1,0 +1,9 @@
+{
+  "name": "Quantity calculator",
+  "version": "1.0",
+  "description": "Compute quantity given price and amount",
+  "browser_action": {
+    "default_popup": "calc.html"
+  },
+  "manifest_version": 2
+}
