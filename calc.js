@@ -4,6 +4,7 @@ document.addEventListener('DOMContentLoaded', function() {
   let amountE = document.getElementById("amount");
   let priceE = document.getElementById("price");
   let resultE = document.getElementById("result");
+  let copyE = document.getElementById("copy");
 
   amountE.focus();
 
@@ -15,6 +16,16 @@ document.addEventListener('DOMContentLoaded', function() {
     }
     let quantity = amount / price;
     resultE.innerHTML = quantity;
-  }, false)
+  }, false);
+
+  copyE.addEventListener('click', function() {
+    var text = resultE.innerText;
+    var elem = document.createElement("textarea");
+    document.body.appendChild(elem);
+    elem.value = text;
+    elem.select();
+    document.execCommand("copy");
+    document.body.removeChild(elem);
+  }, false);
 }, false);
 
