@@ -5,6 +5,8 @@ document.addEventListener('DOMContentLoaded', function() {
   let priceE = document.getElementById("price");
   let resultE = document.getElementById("result");
 
+  amountE.focus();
+
   calc.addEventListener('click', function() {
     let amount = amountE.value;
     let price = priceE.value;
