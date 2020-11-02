@@ -12,10 +12,13 @@ document.addEventListener('DOMContentLoaded', function() {
   calc.addEventListener('click', function() {
     let amount = amountE.value;
     let price = priceE.value;
-    if (amount == 0 || price == 0) {
+    if (amount == "" || price == 0 || price == "") {
       return;
     }
-    let quantity = amount / price;
+    var quantity = amount.replace(",", "") / price;
+    if (Math.ceil(quantity) != Math.floor(quantity)) {
+      quantity = quantity.toFixed(2);
+    }
     resultE.innerHTML = quantity;
   }, false);
 
