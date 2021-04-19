@@ -1,9 +1,14 @@
 {
-  "name": "Quantity calculator",
+  "manifest_version": 2,
+
+  "name": "Pipelies For SIO",
   "version": "1.0",
-  "description": "Compute quantity given price and amount",
-  "browser_action": {
-    "default_popup": "calc.html"
-  },
-  "manifest_version": 2
+  "description": "Adds additional info for SIO apps",
+
+  "content_scripts": [{
+    "css": ["style.css"],
+    "js": ["content.js"],
+    "matches": ["https://pipelines.compass.com/teams/search-infra/apps/*"]
+  }]
+
 }
